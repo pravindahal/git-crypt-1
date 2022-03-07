@@ -61,7 +61,7 @@ jobs:
 
       - name: Upload Release Asset
         if: contains(github.ref, 'refs/tags/') && matrix.os == 'windows-2022'
-        uses: actions/upload-release-asset@v1
+        uses: svenstaro/upload-release-action@v2
         with:
           tag: ${{ github.ref }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
