@@ -22,7 +22,7 @@ jobs:
     name: Build release
     # The needs and if are used to make sure that check-tag is run and the release_version is set
     needs: check-tag
-    if: needs.check-tag.outputs.release_version != ""
+    if: needs.check-tag.outputs.release_version != ''
     strategy:
       matrix:
         os: [ubuntu-20.04, windows-2022]
